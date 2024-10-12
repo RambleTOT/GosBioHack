@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="navbar_false">#7D899B</color>
+    <color name="back_button_gos">#005CCC</color>
 </resources>

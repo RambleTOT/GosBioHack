@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">GosBio</string>
+    <string name="login_gos">Войти через госуслуги</string>
+    <string name="text_main">Главная</string>
+    <string name="text_service">Услуги</string>
+    <string name="text_help">Помощь</string>
+    <string name="text_profile">Профиль</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

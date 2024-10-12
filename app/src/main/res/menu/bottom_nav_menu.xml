@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navbar_main"
+        android:title="@string/text_main"
+        android:icon="@drawable/icon_main"
+        />
+
+    <item
+        android:title="@string/text_service"
+        android:id="@+id/navbar_service"
+        android:icon="@drawable/icon_servicve"
+        />
+
+    <item
+        android:title="@string/text_help"
+        android:id="@+id/navbar_help"
+        android:icon="@drawable/icon_help"
+        />
+
+    <item
+        android:title="@string/text_profile"
+        android:id="@+id/navbar_profile"
+        android:icon="@drawable/icon_profile"
+        />
+
+</menu>
