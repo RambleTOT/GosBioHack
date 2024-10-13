@@ -45,16 +45,6 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:foreground="@drawable/background_progress"
-            android:layout_marginEnd="5dp"/>
-
-        <ProgressBar
-            android:id="@+id/progressBar4"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="0dp"
-            android:layout_height="6dp"
-            android:layout_weight="1"
-            android:max="100"
             android:foreground="@drawable/background_progress"/>
     </LinearLayout>
 
@@ -76,6 +66,7 @@
             android:src="@drawable/icon_stories" />
 
         <TextView
+            android:id="@+id/main_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/lato_bold"
@@ -84,6 +75,7 @@
             tools:text="Биометрия, для тебя, лучший сервис онлайн верификации" />
 
         <TextView
+            android:id="@+id/second_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
