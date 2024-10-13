@@ -25,7 +25,8 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:foreground="@drawable/background_progress"
+            android:progressTint="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray"
             android:layout_marginEnd="5dp"/>
 
         <ProgressBar
@@ -35,7 +36,8 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:foreground="@drawable/background_progress"
+            android:progressTint="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray"
             android:layout_marginEnd="5dp"/>
 
         <ProgressBar
@@ -45,7 +47,8 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:foreground="@drawable/background_progress"/>
+            android:progressTint="@android:color/white"
+            android:backgroundTint="@android:color/darker_gray"/>
     </LinearLayout>
 
     <LinearLayout
