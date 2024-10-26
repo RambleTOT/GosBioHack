@@ -38,7 +38,7 @@ class MainFragment : Fragment() {
 
         }
 
-        binding!!.buttonVerif3.setOnClickListener {
+        binding!!.buttonAbout.setOnClickListener {
             openWebsite("https://map.gosuslugi.ru/?layer=co&filter=rbi")
         }
     }
