@@ -5,44 +5,47 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import ramble.sokol.gosbio.databinding.FragmentMainBinding
-import ramble.sokol.gosbio.databinding.FragmentServiceBinding
+import ramble.sokol.gosbio.databinding.FragmentCurrentBinding
+import ramble.sokol.gosbio.databinding.FragmentCurrentGosBinding
+import ramble.sokol.gosbio.presentation.fragments.BottomNavigationFragment
 
 
-class ServiceFragment : Fragment() {
+/**
+ * A simple [Fragment] subclass.
+ * Use the [CurrentGosFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ */
+class CurrentGosFragment : Fragment() {
 
-    private var binding: FragmentServiceBinding? = null
+    private var binding: FragmentCurrentGosBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = FragmentServiceBinding.inflate(inflater, container, false)
+        binding = FragmentCurrentGosBinding.inflate(inflater, container, false)
         val view = binding!!.root
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        init()
+        binding!!.buttonLogin.setOnClickListener{
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            val verifFragment = VerifFragment()
+            transaction.replace(R.id.layout_fragment, verifFragment)
+            transaction.disallowAddToBackStack()
+            transaction.commit()
+        }
+        binding!!.buttonBack.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            val bottomNavigationFragment = BottomNavigationFragment(MainFragment())
+            transaction.replace(R.id.layout_fragment, bottomNavigationFragment)
+            transaction.disallowAddToBackStack()
+            transaction.commit()
+        }
     }
 
-    private fun init(){
-        binding!!.imageClick.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            val currentFragment = CurrentFragment()
-            transaction.replace(R.id.layout_fragment, currentFragment)
-            transaction.disallowAddToBackStack()
-            transaction.commit()
-        }
-        binding!!.imageClick2.setOnClickListener {
-            val transaction = requireActivity().supportFragmentManager.beginTransaction()
-            val currentFragment = CurrentGosFragment()
-            transaction.replace(R.id.layout_fragment, currentFragment)
-            transaction.disallowAddToBackStack()
-            transaction.commit()
-        }
-    }
 
 }

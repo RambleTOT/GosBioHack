@@ -69,6 +69,7 @@
                     android:layout_marginTop="13dp"/>
 
                 <ImageView
+                    android:id="@+id/image_click_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:src="@drawable/image_service_2"

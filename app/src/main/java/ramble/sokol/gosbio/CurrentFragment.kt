@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import ramble.sokol.gosbio.databinding.FragmentCurrentBinding
 import ramble.sokol.gosbio.databinding.FragmentStorisBinding
+import ramble.sokol.gosbio.presentation.fragments.BottomNavigationFragment
 
 class CurrentFragment : Fragment() {
 
@@ -28,6 +29,13 @@ class CurrentFragment : Fragment() {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             val verifFragment = VerifFragment()
             transaction.replace(R.id.layout_fragment, verifFragment)
+            transaction.disallowAddToBackStack()
+            transaction.commit()
+        }
+        binding!!.buttonBack.setOnClickListener {
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            val bottomNavigationFragment = BottomNavigationFragment(MainFragment())
+            transaction.replace(R.id.layout_fragment, bottomNavigationFragment)
             transaction.disallowAddToBackStack()
             transaction.commit()
         }
