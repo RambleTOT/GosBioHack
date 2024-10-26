@@ -48,15 +48,45 @@
                     android:layout_marginTop="13dp"
                     android:src="@drawable/search_line"/>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:text="Для вас"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginHorizontal="21dp"/>
 
                 <ImageView
                     android:id="@+id/image_click"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:src="@drawable/image_service_1"
                     android:adjustViewBounds="true"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="13dp"
-                    android:src="@drawable/group_service"/>
+                    android:layout_marginHorizontal="21dp"
+                    android:layout_marginTop="13dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image_service_2"
+                    android:adjustViewBounds="true"
+                    android:layout_marginHorizontal="21dp"
+                    android:layout_marginTop="9dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato_bold"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:layout_gravity="center"
+                    android:text="Все услуги"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginHorizontal="21dp"/>
+
 
             </LinearLayout>
 
