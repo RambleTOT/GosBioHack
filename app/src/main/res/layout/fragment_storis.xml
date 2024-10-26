@@ -7,6 +7,16 @@
     tools:context=".StorisFragment"
     android:background="@drawable/image_background">
 
+    <ImageView
+        android:id="@+id/image_story"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        tools:src="@drawable/image_screen_1"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-30dp"
+        />
+
     <LinearLayout
         android:id="@+id/layout_progress"
         android:layout_width="match_parent"
@@ -25,8 +35,7 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:progressTint="@android:color/white"
-            android:backgroundTint="@android:color/darker_gray"
+            android:progressDrawable="@drawable/background_progress"
             android:layout_marginEnd="5dp"/>
 
         <ProgressBar
@@ -36,8 +45,7 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:progressTint="@android:color/white"
-            android:backgroundTint="@android:color/darker_gray"
+            android:progressDrawable="@drawable/background_progress"
             android:layout_marginEnd="5dp"/>
 
         <ProgressBar
@@ -47,56 +55,65 @@
             android:layout_height="6dp"
             android:layout_weight="1"
             android:max="100"
-            android:progressTint="@android:color/white"
-            android:backgroundTint="@android:color/darker_gray"/>
+            android:progressDrawable="@drawable/background_progress"
+            android:layout_marginEnd="5dp"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="6dp"
+            android:layout_weight="1"
+            android:max="100"
+            android:progressDrawable="@drawable/background_progress"/>
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginTop="35dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_progress">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearLayout2"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginHorizontal="16dp"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/layout_progress">-->
 
-        <ImageView
-            android:layout_width="41dp"
-            android:layout_height="41dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/icon_stories" />
+<!--        <ImageView-->
+<!--            android:layout_width="41dp"-->
+<!--            android:layout_height="41dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            android:src="@drawable/icon_stories" />-->
 
-        <TextView
-            android:id="@+id/main_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/lato_bold"
-            android:textColor="@color/white"
-            android:textSize="32sp"
-            tools:text="Биометрия, для тебя, лучший сервис онлайн верификации" />
+<!--        <TextView-->
+<!--            android:id="@+id/main_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:fontFamily="@font/lato_bold"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="32sp"-->
+<!--            tools:text="Биометрия, для тебя, лучший сервис онлайн верификации" />-->
 
-        <TextView
-            android:id="@+id/second_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:fontFamily="@font/lato_regular"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            tools:text="авторизуя, подтверждай документы и всё онлайн, не выходя из дома" />
+<!--        <TextView-->
+<!--            android:id="@+id/second_text"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="14dp"-->
+<!--            android:fontFamily="@font/lato_regular"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="16sp"-->
+<!--            tools:text="авторизуя, подтверждай документы и всё онлайн, не выходя из дома" />-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:src="@drawable/image_stories_1"
-        android:layout_marginTop="50dp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/image_stories_1"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />-->
 
     <LinearLayout
         android:id="@+id/linearLayout"
