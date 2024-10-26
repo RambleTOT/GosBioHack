@@ -12,6 +12,7 @@ import ramble.sokol.gosbio.databinding.FragmentServiceBinding
 class ServiceFragment : Fragment() {
 
     private var binding: FragmentServiceBinding? = null
+    private lateinit var dataStorage: DataStorage
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +30,7 @@ class ServiceFragment : Fragment() {
     }
 
     private fun init(){
+        dataStorage = DataStorage(requireActivity())
         binding!!.imageClick.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             val currentFragment = CurrentFragment()
@@ -39,6 +41,14 @@ class ServiceFragment : Fragment() {
         binding!!.imageClick2.setOnClickListener {
             val transaction = requireActivity().supportFragmentManager.beginTransaction()
             val currentFragment = CurrentGosFragment()
+            transaction.replace(R.id.layout_fragment, currentFragment)
+            transaction.disallowAddToBackStack()
+            transaction.commit()
+        }
+        binding!!.buttonNextMasha.setOnClickListener {
+            dataStorage.saveData("masha", 3)
+            val transaction = requireActivity().supportFragmentManager.beginTransaction()
+            val currentFragment = CurrentFragment()
             transaction.replace(R.id.layout_fragment, currentFragment)
             transaction.disallowAddToBackStack()
             transaction.commit()
