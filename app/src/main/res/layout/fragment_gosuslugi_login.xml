@@ -7,14 +7,33 @@
     tools:context=".GosuslugiLoginFragment"
     android:background="@color/white">
 
-    <ProgressBar
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="@string/hello_blank_fragment"
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:src="@drawable/image_masha_is_fine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lato_bold"
+            android:textSize="24dp"
+            android:textColor="@color/black"
+            android:text="Маша думает...\n"
+            android:gravity="center"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
 
 
 
